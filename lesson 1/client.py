@@ -8,7 +8,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 sock.connect(HOST)
 
-sock.sendall('Привет'.encode("utf-8")) 
+sock.sendall('Добрый вечер'.encode("utf-8")) 
 print('---жду ответ от сервера---')
 data = sock.recv(1024).decode() 
 print(data) # печатаем ответ

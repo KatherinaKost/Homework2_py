@@ -16,6 +16,8 @@ while 1:
     print(data)
     if 'Привет' in data:
           conn.send("Привет, как тебя зовут?".encode())
+    else:
+         conn.send("как тебя зовут?".encode())
     data = conn.recv(1024).decode()
     print(data)
     conn.send(f'Очень приятно, {data}!'.encode())

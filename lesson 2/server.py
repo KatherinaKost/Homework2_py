@@ -72,25 +72,29 @@ while True:
                 if dict_data['command'] == 'reg':
                     if valid(dict_data['login'], dict_data['password']):
                         current_datetime = datetime.now().replace(microsecond=0)
-                        data = f"{current_datetime} - пользователь {dict_data['login']} зарегистрирован"
-                        print(data)
+                        answer = f"{current_datetime} - пользователь {dict_data['login']} зарегистрирован"
+                        print(answer)
                         conn.send(data.encode())
                         user.append(dict_data['login'])
                     else:
-                        data = f'{datetime.now().replace(microsecond=0)} - ошибка регистрации {dict_data['login']} - неверный пароль/логин'
-                        print(data)
-                        conn.send(data.encode())
+                        answer = f'{datetime.now().replace(microsecond=0)} - ошибка регистрации {dict_data['login']} - неверный пароль/логин'
+                        print(answer)
+                        conn.send(answer.encode())
 
                 if dict_data['command'] == 'signin':
                     if dict_data['login'] in user:
                         current_datetime = datetime.now().replace(microsecond=0)
-                        data = f'{current_datetime} - пользователь {dict_data['login']} произведен вход'
-                        print(data)
-                        conn.send(data.encode())
+                        answer = f'{current_datetime} - пользователь {dict_data['login']} произведен вход'
+                        print(answer)
+                        conn.send(answer.encode())
                     else:
-                        data = f'{datetime.now().replace(microsecond=0)} - ошибка входа {dict_data['login']} - неверный пароль/логин'
-                        print(data)
-                        conn.send(data.encode())
+                        answer = f'{datetime.now().replace(microsecond=0)} - ошибка входа {dict_data['login']} - неверный пароль/логин'
+                        print(answer)
+                        conn.send(answer.encode())
+
+                else:
+                    conn.send('Неизвестная команда'.encode())
+
 
             except Exception as e:
                 error_msg = f"пришли неизвестные данные - {data}"

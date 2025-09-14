@@ -33,5 +33,7 @@ while 1:
         print(data)
     except ConnectionResetError:
         print('Соединение разорвано')
+        break
+        
 
 

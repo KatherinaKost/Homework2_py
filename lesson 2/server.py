@@ -74,14 +74,14 @@ while True:
                         current_datetime = datetime.now().replace(microsecond=0)
                         answer = f"{current_datetime} - пользователь {dict_data['login']} зарегистрирован"
                         print(answer)
-                        conn.send(data.encode())
+                        conn.send(answer.encode())
                         user.append(dict_data['login'])
                     else:
                         answer = f'{datetime.now().replace(microsecond=0)} - ошибка регистрации {dict_data['login']} - неверный пароль/логин'
                         print(answer)
                         conn.send(answer.encode())
 
-                if dict_data['command'] == 'signin':
+                elif dict_data['command'] == 'signin':
                     if dict_data['login'] in user:
                         current_datetime = datetime.now().replace(microsecond=0)
                         answer = f'{current_datetime} - пользователь {dict_data['login']} произведен вход'

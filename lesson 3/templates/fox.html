@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox</title>
+</head>
+<body>
+    <h1>Рандомные лисички</h1>
+
+    {% for fox in foxes%}
+    <img src="{{fox}}" width="300" alt="no pic">
+    {% endfor %}
+
+    <a href="/"> Назад</a>
+    
+</body>
+</html>

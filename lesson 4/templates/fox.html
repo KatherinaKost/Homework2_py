@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox</title>
+    <style>
+        body {
+              color: purple;
+              background-color: #f7f1cd
+            }
+
+        header {
+        font-size: 32px;
+        color: #000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+      }
+        img {
+            width: rem;
+            border-radius: 10px;
+            gap: 7px;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            padding: 5px ;
+            color: #000;
+            background-color: beige;
+            border: black solid;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 40px;        
+        }
+    </style>
+</head>
+<body>
+    <header>Приветствую, {{ user or 'гость' }}</header>
+    
+    <h1>Рандомные лисички</h1>
+
+    {% for fox in foxes%}
+    <img src="{{fox}}" width="300" alt="no pic">
+    {% endfor %}
+
+    <a href="/"> Назад</a>
+    
+</body>
+</html>

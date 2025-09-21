@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main page</title>
+    <style type="text/css">
+      body {
+              color: purple;
+              background-color: #f7f1cd
+            }
+
+      .buttons {
+        position: absolute;
+        display: flex;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 10px; 
+      }
+
+      .button {
+        display: inline-block;
+        padding: 5px ;
+        color: #000;
+        background-color: rgb(247, 247, 247);
+        border: black solid;
+        border-radius: 5px;
+        text-decoration: none;
+        margin: 5px;      
+      }
+
+      header {
+        font-size: 32px;
+        color: #000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+      }
+       ul {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto; 
+                   
+        }
+
+       ul li {
+            margin: 12px 0;
+            padding: 8px;
+            background-color: rgba(255,255,255,0.8);
+            border: solid;
+            border-radius: 6px;
+            text-align: center;
+       }
+      ul li a {
+            color: #070e16;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            
+        }
+  </style>
+</head>
+<body>
+  <header>Приветствую, {{ user or 'гость' }}</header>
+
+    <h1 style="font-family:verdana;text-align:center;">Главная страница</h1>
+    
+    <ul>
+        <li><a href="/duck/">Посмотреть рандомную утку </a></li>
+        
+        <li><strong>Посмотреть лисичек (выберите количество):</strong></li>
+        <li><a href="/fox/1/">1 лисичка</a></li>
+        <li><a href="/fox/3/">3 лисички</a></li>
+        <li><a href="/fox/5/">5 лисичек</a></li>
+        <li><a href="/fox/10/">10 лисичек</a></li>
+
+        <li><strong>Посмотреть погоду:</strong></li>
+        <li><a href="/weather-minsk/">Погода в Минске </a></li>
+        <li><a href="/weather/Paris/">Погода в Париже</a></li>
+        <li><a href="/weather/Tokyo/">Погода в Токио</a></li>
+        <li><a href="/weather/Moscow/">Погода в Москве</a></li>
+    </ul>
+      
+    <div class="buttons">
+      {%if not user%}
+      <a href="{{ url_for('form_reg')}}" class="button">Зарегистрироваться </a>
+      <a href="{{ url_for('form_sign') }}" class="button">Войти</a>
+      {%endif%}
+
+      {%if user%}
+      <a href="{{ url_for('logout')}}" class="button">Выйти </a>
+      {%endif%}
+    </div>
+</body>
+</html>

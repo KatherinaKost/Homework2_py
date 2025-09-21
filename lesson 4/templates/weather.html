@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+        font-size: 32px;
+        color: #000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+
+       a{
+            display: inline-block;
+            padding: 5px ;
+            color: #000;
+            background-color: rgb(255, 255, 255);
+            border: black solid;
+            border-radius: 5px;
+            text-decoration: none;        
+        }
+
+        body {
+              color: purple;
+              background-color: #f7f1cd
+            }
+    </style>
+</head>
+<body>
+    <header>Приветствую {{ user or 'гость' }}</header>
+    
+    <h1>Погода в {{weather.city}}</h1>
+    <p>{{weather.weather}}</p>
+    <p>Температура воздуха: {{weather.temp}} °C</p>
+    <p>Ощущается как: {{weather.feels_like}} °C </p>
+    <p>Влажность: {{weather.humidity}} %</p>
+    <p>Скорость ветра: {{weather.wind}} м/с </p>
+
+    <a href="/"> Назад</a>
+    
+</body>
+</html>

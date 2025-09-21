@@ -1,0 +1,30 @@
+{
+    "belka_qwert": {
+        "firstName": "катя",
+        "lastName": "костюченко",
+        "email": "katya_71296@mail.ru",
+        "age": "28",
+        "pass": "$2b$12$OlzZEMEzS4k3H7DADDIOJ.VYIvCfZWZZ8Ka2A6oX1VKWqVchswmEu"
+    },
+    "KatherinaKost": {
+        "firstName": "катя",
+        "lastName": "костюченко",
+        "email": "katya_71296@mail.ru",
+        "age": "28",
+        "pass": "$2b$12$M1COj/efW.hiKWjTS0Cs/u5Tj/e0/90SMPYSO6JYQXKyHHFXlD9y2"
+    },
+    "violetta_lovepiffko": {
+        "firstName": "Виолетта",
+        "lastName": "Лебедевич",
+        "email": "Viola_123@mail.ru",
+        "age": "28",
+        "pass": "$2b$12$/.CoeEV9cT/2kTVFGdDGU.veLkODNSLIlfr8UgU2Mznt9vRC4hNBS"
+    },
+    "Petr_petrov": {
+        "firstName": "Петр",
+        "lastName": "Петров",
+        "email": "petr@mail.ru",
+        "age": "20",
+        "pass": "$2b$12$tUBqyra.TiOvYimXdsibmOBeOiJD2VTKWL7qAH6jTW2wj91IoWLi."
+    }
+}

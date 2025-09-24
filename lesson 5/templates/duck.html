@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck</title>
+    <style>
+        body {
+              color: purple;
+              background-color: #f7f1cd
+            }
+
+        header {
+        font-size: 32px;
+        color: #000;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+      }
+       img {
+            width: 100;
+            border-radius: 10px;
+            height: 70;           
+        }
+
+         a{
+            display: inline-block;
+            padding: 5px ;
+            color: #000;
+            background-color: rgb(255, 255, 255);
+            border: black solid;
+            border-radius: 5px;
+            text-decoration: none;        
+        }
+    </style>
+</head>
+<body>
+    <header>Приветствую,{{ user or 'гость' }}</header>
+    
+    <h1 style="font-family:verdana;text-align:center;">Рандомная утка №{{num}}</h1>
+    <img src="{{image}}" alt="no pick">
+    <a href="/"> Назад</a>
+    
+</body>
+</html>

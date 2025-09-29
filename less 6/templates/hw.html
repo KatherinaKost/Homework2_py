@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #table1 table{
+            border-collapse: collapse;
+            border: 2px solid red;
+        }
+        #table1 th{
+            background-color: crimson;
+            color: white;
+
+        }
+        #table1 tr {
+             text-align: center;
+        }
+        #table1 tr:nth-child(even) {
+            background-color: #ae946a;
+        }
+        #table1 tr:nth-child(odd) {
+            background-color: #fff8e1;
+
+        }
+        #table2 table {
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+
+        #table2 thead th {
+            background-color: grey;
+            color: azure;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+
+        #table2 tbody td:nth-child(1), 
+        #table2 tbody td:nth-child(3) { 
+            background-color: #7fdce8; 
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        #table2 tbody td:nth-child(2), 
+        #table2 tbody td:nth-child(4) {
+            background-color: yellow;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        textarea {
+            resize: none;
+        }
+        nav a {
+            text-decoration: none;
+        }
+        footer a {
+            display: inline-block;
+            padding: 5px ;
+            color: #000;
+            background-color: rgb(229, 229, 222);
+            border: black solid;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            width: 50px;    
+        }
+
+    </style>
+</head>
+<body>
+    <header style="font-size: xx-large; text-align: center;">Домашнее задание <img src="https://img.icons8.com/?size=100&id=59916&format=png&color=000000" alt="" width="50"></a></header>
+    <nav>
+        <a href="/"> Главная страница / </a>
+        <a href="/form_reg/">Регистрация / </a>
+        <a href="/form_sign/">Вход</a>
+    </nav>
+    <main>
+        <p>Joy of T<sub>E</sub>X</p>
+        <hr>
+
+        <h2>Евгений Евтушенко</h2>
+        <br>
+        <p >---1955---</p> 
+        
+            <pre>
+                Бывало, спит у ног собака,
+                костер занявшийся гудит,
+                и женщина из полумрака
+                глазами зыбкими глядит.
+            
+                Потом под пихтою приляжет
+                на куртку рыжую мою
+                и мне,
+                 задумчивая,
+                          скажет:
+               "А ну-ка, спой!.."-
+                               и я спою.
+            </pre>
+        
+        <hr>
+
+        <table style="border-collapse: collapse;border: 1px solid black;">
+            <caption>Добыча драгоценных камней</caption>
+            <thead>
+                <tr style="border-collapse: collapse;border: 1px solid black;">
+                    <th style="border-collapse: collapse;border: 1px solid black;"></th>
+                    <th style="border-collapse: collapse;border: 1px solid black;">2010</th>
+                    <th style="border-collapse: collapse;border: 1px solid black;">2012</th>
+                    <th style="border-collapse: collapse;border: 1px solid black;">2014</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-collapse: collapse;border: 1px solid black;">
+                    <td style="border-collapse: collapse;border: 1px solid black;">Сапфиры</td>
+                    <td rowspan="2" style="border-collapse: collapse;border: 1px solid black;">1483</td>
+                    <td style="border-collapse: collapse;border: 1px solid black;">4532</td>
+                    <td style="border-collapse: collapse;border: 1px solid black;">6573</td>
+                </tr>
+                <tr style="border-collapse: collapse;border: 1px solid black;">
+                    <td style="border-collapse: collapse;border: 1px solid black;">Рубины</td>
+                    <td style="border-collapse: collapse;border: 1px solid black;">3853</td>
+                    <td style="border-collapse: collapse;border: 1px solid black;">7832</td>
+                </tr>
+                <tr style="border-collapse: collapse;border: 1px solid black;">
+                    <td style="border-collapse: collapse;border: 1px solid black;">Алмазы</td>
+                    <td style="border-collapse: collapse;border: 1px solid black;">683</td>
+                    <td style="border-collapse: collapse;border: 1px solid black; text-align: center;" colspan="2">238</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+
+        <div id="table1">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>2004</th>
+                        <th>2005</th>
+                        <th>2006</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Рубины</td><td>41</td><td>58</td><td>67</td>
+                    </tr>
+                    <tr>
+                        <td>Изумруды</td><td>28</td><td>34</td><td>43</td>
+                    </tr>
+                    <tr>
+                        <td>Сапфиры</td><td>31</td><td>40</td><td>51</td>
+                    </tr>
+                    <tr><td>Аметисты</td><td>45</td><td>58</td><td>63</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+
+        <div id="table2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>цвет</th>
+                        <th>Твердость по Моосу</th>
+                        <th>Формула</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Алмаз</td>
+                        <td>Белый</td>
+                        <td>10</td>
+                        <td>C</td>
+                    </tr>
+                    <tr>
+                        <td>Рубин</td>
+                        <td>красный</td>
+                        <td>9</td>
+                        <td>AL<sub>2</sub>O<sub>3</sub></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <h2>Химические элементы</h2>
+        <hr width="100" style="width: 350px;margin-left: 0px;">
+
+        <div id="table3">
+            <table>
+                
+                <head>
+                    <th>Номер</th>
+                    <th style="padding-right: 4px;">Название</th>
+                    <th style="padding-right: 4px;">Символ</th>
+                    <th style="padding-right: 4px;">Год</th>
+                    <th style="padding-right: 4px;">Статья</th>
+                </head>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td style="text-decoration:underline;color: blue;">Водород</td>
+                        <td style="font-weight: bold; text-align: center;">H</td>
+                        <td>1766</td>
+                        <td>
+                            <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%BE%D0%B4%D0%BE%D1%80%D0%BE%D0%B4" target="_blank">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAaVBMVEX///8AAAABAAIAAALw8PBTUlPo6OgzMzQ3NzeEhITExMQkJCX7+/tkZGTLy8uHh4fe3t4sLCySkpIeHh6ZmZnW1tZMTEwVFRWjo6Ozs7NfX19ra2t8fHxXV1hFRUW+vr4MDA10dHQ+Pj62L9EXAAAEdUlEQVR4nO2ciZKqMBBFCWBAxQ0E13ku//+RLwuSIDo2oXuKmsmlyqWBcD0JIQmYIICrXKXX4nbJrEieXuenWWxHEhG5xN29aXRmWgv+iEzrSNVE8jrytf4RS1nFWCglDqk9ZMcmsiv1RibCyp8wNWVRqBfBQeXOlplQorbZC091iP37gRwsFQNWv+5FhFuRUEXWRR1h8nVLbyqXWEQ+yQNGCkwuOamIfJ/EClS9jXxPso+JDlRcqV+fB0uNQZSqSmHJg5nkw0JRhv6pVaug1MTIy3q8EaWF3bksy5LPLIjvEsculmeljgRX+UFGVPljB2pTqgCxRSBzTeK4BDyVH6pMFXjxSVhQ70Ug8zHUEXpT0cNUVJuKGlPRw1RUmyIjlXGj8onUPi6TNqk950+ktrwllCpilW4sPZGaJxvWJlXU2xhSRWInsEn3wz3tWVuhRSpsItpUaFVYDamQPWtwfopryKO6bhZlasuskCEVhfU2DalmaXavhpqKJ/oqZoudxIqDHWc3FbFC7C4iS9bdWaxKEUypCrsleZHllR0RtVOQpZ1IxZ6kSGGYEr/tWk2MbjO1hp+/6kBVR9arR2RyqrcxEb0lwyPFUm4i3UsZJFKnpk5MJFIJ/7wlKDVVhSGRwjTlSYFS86Sgqf1uUhSmthsWaTGHVgNN9m2HtRpoSKWtq/nCwRQBqdRu06huWV9TBKRy02wQ311MEZDK8p2W+j4SUs131T8bCamHeDJCUjxBIZX115MpdFLx9rTorZUZN6MglZ06fTiQGs4UpNYvu0yfxNiUklTJ2IvO5dPSDaleIRmpeOOWfTNKUkE5aQ9WgHQ3bROaeirj696yDklUTw3TX6rRh5vypKCmPCmoqV9MapSmfPZBTXlSUFM2qeU2762D6TqQkMo/N+heKG0OSkGKOzaHm3vbFKRKl35DfS9nZKT0kwJkpOSNKgedTGokZx9fznprTXz2DZWv0fuY8qSgpjwpqClPCmrKk4Ka8l0sqCn87OPL/rIePyUhdUkcmlO7Mykp7tTGs+7H0oyjf99DeNdxaLXRCUg53XFo9WbQy9T5c1a90LzV78M/+w6r/tqbY/6hegrBlCcFNeVJQU15UlBTnhTUlCcFNeVJQU2hk1p3nnoHqDBPJ1KQyu5OjTzzdzqKzqjrOHrrWZexPIDT9LFIsu/oln3N/9ZICno8TeZ9VRyXJrU/UyVgmPKkoKY8KagpTwpqypOCmvKkoKY8KagpTwpqypOCmvKkoKZ+MalRmhpr9qV9d3ujDJPU5tD/Wa5XuiCS6s5Y4awQjRR0JOO7sDXdxXBSX27DP9+NDA0mFdxawz8IpJgZrnIlFfAdXoHSsuoXV1IB309RdbDqPFdSpHImRSk0UpgTbyGRys7JHWEGolpIpNTjEhcURwEWKT19WO+5BN4Jh5SZPgxFOKTM9GEoGiUpx1kAnqRJXXuP8L9TiEYKsXmlUkMhNbA91bmfNLhKmKM3r0J2HHqRWJl5MpFIIcwGF+cFLiuWvL9q/Qeycm9Y2sZUHAAAAABJRU5ErkJggg==" alt="no pic" width="30"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr width="100" style="width: 350px;margin-left: 0px;">
+        <hr>
+
+        <h2>Генераторы</h2>
+        <ul>
+            <li>Цвета</li>
+            <ul>
+                <li>Color mixer</li>
+                <li>Color tester</li>
+            </ul>
+            <li>Фавиконы</li>
+            <ol>
+                <li>Favicon.cc</li>
+                    <ul>
+                        <li>
+                            <a href="https://www.favicon.cc/" target="_blank" download>скачать</a>               
+                        </li>
+                    </ul>
+                <li>WebLab Favicon</li>
+            </ol>    
+        </ul>
+        <hr>
+
+        <h2>Стихотворение</h2>
+        <pre>
+            Мириады маленьких дел
+            Пьют по капле гаснущий день,
+            А <i>дела большие</i> сушит жажда.
+            Оставляя все на «потом»,
+            Прозреваем задним числом,
+            Только день <b>не повторится дважды</b>
+            И. Тальков
+        </pre>
+        <hr>
+
+        <h1 style="font-family:Arial, Helvetica, sans-serif; color: chocolate;"> Заголовок первого уровня</h1>
+        <h2> Заголовок второго уровня</h2>
+        <h3 style="color: darksalmon;"> Заголовок третьего уровня</h3>
+        <p>пример ссылки <a href="https://www.google.com/" target="_blank" style='color: chartreuse;'>ведущей на другую страницу</a></p>
+        <hr>
+
+        <label for="Неделя">Неделя: </label>
+        <input type="week" id="Неделя">
+        <br>
+        <label for="datetime">Дата и время: </label>
+        <input type="datetime-local" id="datetime" style="margin-top: 10px;">
+        <br>
+        <label for="month">Месяц: </label>
+        <input type="month" id="month" style="margin-top: 10px;">
+        <br>
+        <label for="time"> Время: </label>
+        <input type="time" id="time" style="margin-top: 10px;">
+        <hr>
+
+        <h2>Форма заявки на работу в зоопарке</h2>
+        <p><i>Пожалуйста, заполните форму. Обязательные поля для заполнения помечены *</i></p>
+        <form action="" style="width: 600px;">
+            <fieldset>
+                <legend>Контактная информация</legend>
+                <label for="name"> Имя*</label>
+                <input type="text" id="name" required>
+                <br>
+                <label for="tel"> Телефон</label>
+                <input type="tel"  id="tel">
+                <br>
+                <label for="email">Email*</label>
+                <input type="email" id="email" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Персональная информация</legend>
+                <label for="age">Возраст*</label>
+                <input type="number" id="age" min="18" required>
+                <br>
+                <label for="sex">Пол</label>
+                <select name="" id="sex">
+                    <option value="male">Мужской</option>
+                    <option value="female">Женский</option>
+                </select>
+                <br>
+                <label for="info">Перечислите личные качества</label>
+                <textarea id="info" rows="10" cols="50"></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Перечислите любимых животных</legend>
+                <label>
+                    <input type="checkbox"  value="animal1">
+                    Зебра
+                    </label>
+                    <label>
+                    <input type="checkbox" value="animal2">
+                    Кошак
+                    </label>
+                    <label>
+                    <input type="checkbox" value="animal3">
+                    Человек
+                    </label><br>
+                    <label>
+                    <input type="checkbox" value="animal4">
+                    Слон
+                    </label>
+                    <label>
+                    <input type="checkbox" value="animal5">
+                    Голубь
+                    </label>
+                    <label>
+                    <input type="checkbox" value="animal6">
+                    Обезьяна
+                    </label>
+            </fieldset>
+            <input type="submit" value="Отправить">
+        </form>
+        <hr>
+
+        <h1>Карта сокровищ</h1>
+        <hr style="margin-right: 0; width:350;">
+        <figure>
+            <img src="https://img.freepik.com/premium-vector/map-treasures-paper-parchment_8071-3421.jpg" alt="no">
+            <figcaption>
+                <progress value="30" max="100"></progress>
+            </figcaption>
+        </figure>
+    </main>
+<footer>
+    <a href="/"> Назад</a>
+</footer>
+    
+</body>
+</html>

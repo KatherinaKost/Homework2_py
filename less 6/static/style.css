@@ -1,0 +1,153 @@
+/* static/style.css */
+body {
+    background-color: #f7f1cd;
+    color: purple;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    grid-template-rows: auto auto 1fr auto;
+    min-height: 100vh;
+    gap: 10px;
+    padding: 15px;
+}
+
+
+.header::before { content: "заголовок"; display: block; font-size: 0.8em; color: #888; margin-bottom: 6px; }
+.navbar::before { content: "меню"; display: block; font-size: 0.8em; color: #888; margin-bottom: 6px; }
+.main::before { content: "основной текст"; display: block; font-size: 0.8em; color: #888; margin-bottom: 12px; }
+.footer::before { content: "подвал"; display: block; font-size: 0.8em; color: #888; margin-bottom: 6px; }
+
+.header {
+    grid-area: header;
+    font-size: 32px;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    background: #fff8dc;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar {
+    grid-area: nav;
+    background: #e6e6fa;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.navbar a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #4b0082;
+    font-weight: bold;
+}
+
+.nav-menu a {
+    min-width: 100px;
+    justify-content: center; 
+}
+
+.main {
+    grid-area: main;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    
+}
+
+.main h1 {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    color: #4b0082;
+}
+
+.buttons a{
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    color: #000;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    padding: 10px;
+    color: #666;
+}
+
+p {
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+
+.menu li{
+    position: relative;
+    float: inline-start ;
+    list-style: none;
+}
+.menu li a {
+    padding: 15px;
+    color: black;
+    font-size: 20px;
+    display: flex;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none; 
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;  
+    margin: 0 50px;
+}
+.menu li a:hover{
+    background: #666;
+}
+.menu li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background: white;
+    display: none;
+}
+.menu li ul li {
+    width: 100%;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.menu li ul li > a{
+    border: none;
+    margin: 0;
+    text-align: center;
+}
+.menu li:hover > ul{
+    display: initial;
+}
+
+.currency-rates {
+    font-size: medium;
+    color: black    
+}
+
+.foxes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}

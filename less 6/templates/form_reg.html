@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+              color: purple;
+              background-color: #f7f1cd
+            }
+
+        form{
+            margin: auto; 
+            width: 300px;            
+            background-color: aliceblue;   
+        }
+
+        fieldset{
+            background-color: rgb(204 175 210);
+            border: #c6acdc 1px solid;
+            border-radius: 10px;      
+        }
+
+        label{
+            display: inline-block; 
+            width: 70px;
+            }
+
+       h1{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <form action="" method="post">
+        <h1>Регистрация</h1>
+        <fieldset>
+            <p>
+                <label for="firstName">Имя</label>
+                <input type="text" name="firstName" id="firstName" value="{{data_form.firstName or ''}}">
+
+                {%if errors.firstName%}
+                    <span style="color: red;" >{{errors.firstName}}</span>
+                {%endif%}
+            </p>
+            <p>
+                <label for="lastName">Фамилия</label>
+                <input type="text" name="lastName" id="lastName" value="{{data_form.lastName or ''}}">
+
+                {%if errors.lastName%}
+                    <span style="color: red;" >{{errors.lastName}}</span>
+                {%endif%}
+            </p>
+            <p>
+                <label for="login">Логин</label>
+                <input type="text" name="login" id="login" value="{{data_form.login or ''}}">
+
+                {%if errors.login%}
+                    <span style="color: red;" >{{errors.login}}</span>
+                {%endif%}
+
+                {%if errsave%}
+                    <span style="color: red;" >{{errsave}}</span>
+                {%endif%}
+
+            </p>
+            <p>
+                <label for="pass">Пароль</label>
+                <input type="password" name="pass" id="pass">
+
+                {%if errors.pas%}
+                    <span style="color: red;" >{{errors.pas}}</span>
+                {%endif%}
+            </p>
+            <p>
+                <label for="userAge">Возраст</label>
+                <input type="number" name="age" id="userAge" value="{{data_form.age or '' }}">
+
+                {%if errors.age%}
+                    <span style="color: red;" >{{errors.age}}</span>
+                {%endif%}
+            </p>
+            <p>
+                <label for="userEmail">E-mail</label>
+                <input type="email" name="email" id="userEmail" value="{{data_form.email or ''}}">
+
+                {%if errors.mail%}
+                    <span style="color: red;" >{{errors.mail}}</span>
+                {%endif%}
+            </p>
+            <input type="submit" value="Регистрация">
+        </fieldset>
+    </form>
+    
+</body>
+</html>

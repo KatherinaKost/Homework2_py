@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+
+{%block title%}>Главная страница{%endblock%}
+    
+    {% block content %}
+      {%if user%}
+          <ul class="menu">
+          <li>
+              <a href="/duck/">Утка случайная</a>
+          </li>
+
+          <li><a href="#">Лисички</a>      
+              <ul>
+                  <li><a href="/fox/1/">1 лисичка</a></li>
+                  <li><a href="/fox/3/">3 лисички</a></li>
+                  <li><a href="/fox/5/">5 лисичек</a></li>
+                  <li><a href="/fox/10/">10 лисичек</a></li>
+              </ul>
+          </li>
+
+          <li><a href="#"> Погода</a>  
+            
+              <ul>
+                  <li><a href="/weather-minsk/">Минск</a></li>
+                  <li><a href="/weather/Paris/">Париж</a></li>
+                  <li><a href="/weather/Tokyo/">Токио</a></li>
+                  <li><a href="/weather/Moscow/">Москва</a></li>
+              </ul>
+          </li>
+      </ul>
+    {%endif%}
+      
+    <div class="buttons">
+      {%if not user%}
+      <a href="{{ url_for('form_reg')}}" class="button">Зарегистрироваться </a>
+      <a href="{{ url_for('form_sign') }}" class="button">Войти</a>
+      {%endif%}
+
+      {%if user%}
+      <a href="{{ url_for('logout')}}" class="button">Выйти </a>
+      {%endif%}
+    </div>
+    {% endblock%}

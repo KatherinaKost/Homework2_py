@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+    
+    {%block title%}рандомные лисички{%endblock%}
+
+    {% block content %}
+   
+    <div class="foxes">
+        <div class="foxes">
+            {% for fox in foxes%}
+            <img src="{{fox}}" width="300" alt="no pic">
+            {% endfor %}
+        </div>
+    </div>
+        <a href="/"> Назад</a>
+    {% endblock%}
+    

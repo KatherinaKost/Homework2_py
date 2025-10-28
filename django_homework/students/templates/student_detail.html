@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ student.name}} {{ student.surname}}{% endblock %}
+
+{% block content %}
+    {% if student.photo %}
+        <img src="{{student.photo.url}}" width="200" alt="no pic">
+    {% endif %}
+    <h2>{{ student.name}} {{ student.surname}}</h2>
+    <p><strong>Возраст:</strong> {{ student.age }}</p>
+    <p><strong>Пол:</strong> {{ student.sex }}</p>
+
+    <h3>Оценки:</h3>
+    {% if grades %}
+        <ul>
+        {% for grade in grades %}
+            <li>{{ grade.course.name }}: {{ grade.grade }} ({{ grade.date }})</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Оценок пока нет.</p>
+    {% endif %}
+
+    <a href="{% url  'student_list' %}">Назад к списку</a>
+{% endblock %}

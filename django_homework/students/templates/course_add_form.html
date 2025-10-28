@@ -1,0 +1,15 @@
+{%extends 'base.html' %}
+
+{%block title%} Добавить курс {%endblock%}
+
+
+{% block content %}
+    <h2>Добавить / изменить курс</h2>
+    <form  class="persons_forms" action="" method="post">
+        {% csrf_token %} <!-- защита от поддельных урл, когда форм-ся форма вкладывается защищенный токен и если ответ приходит с этим токеном - все ок -->
+
+        {{form.as_p}} <!-- сам распаковывает форму -->
+        <input class="add_button" type="submit" value="ok">
+    </form>
+
+{% endblock %}

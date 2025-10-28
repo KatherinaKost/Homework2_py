@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Список студентов{% endblock %}
+
+{% block content %}
+<h1>Список обучающихся</h1>
+
+{% for student in students %}
+    <div class="student-item">
+        <a href="{% url 'student_detail' student.id %}">
+            {{ student.name }} {{ student.surname }}
+        </a>
+        {% if student.photo %}
+            <img src="{{ student.photo.url }}" alt="{{ student.name }}">
+        {% endif %}
+        <span>
+            <a href="{% url 'student_edit' student.pk %}">редактировать</a> |
+            <a href="{% url 'student_delete' student.pk %}">удалить</a>
+        </span>
+    </div>
+{% empty %}
+    <p>Нет студентов</p>
+{% endfor %}
+
+<a href="{% url 'student_add' %}">Добавить</a>
+{% endblock %}
+    

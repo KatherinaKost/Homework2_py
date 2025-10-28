@@ -1,0 +1,12 @@
+{%extends 'base.html' %}
+{%block title%} Регистрация {%endblock%}
+
+
+{% block content %}
+    <form  class="persons_forms" action="" method="post">
+        {% csrf_token %} <!-- защита от поддельных урл, когда форм-ся форма вкладывается защищенный токен и если ответ приходит с этим токеном - все ок -->
+        {{form.as_p}} <!-- сам распаковывает форму -->
+        <input  type="submit" value="Регистрация">
+    </form>
+
+{% endblock %}
